@@ -1,5 +1,7 @@
 .layout {
   display: flex;
+  background-color: #555;
+  min-height: 100vh;
 }
 
 .layout > div:first-child {

@@ -17,13 +17,12 @@
 
 .menu-items a {
   display: flex;
-  column-gap: 10px;
+  column-gap: 20px;
   color: #fff;
   text-decoration: none;
   padding: 12px;
   transition: background-color 0.3s ease;
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 16px;
   border-radius: 4px;
   align-items: center;
 }
