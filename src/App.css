@@ -1,0 +1,11 @@
+.layout {
+  display: flex;
+}
+
+.layout > div:first-child {
+  width: 20%;
+}
+
+.layout > div:nth-child(2) {
+  width: 80%;
+}
