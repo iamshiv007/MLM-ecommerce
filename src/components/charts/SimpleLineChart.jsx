@@ -64,6 +64,17 @@ const SimpleLineChart = () => {
           height: "400px",
         }}
       >
+        <p
+          style={{
+            color: "white",
+            marginBottom: "20px",
+            fontSize: "18px",
+            fontWeight: "500",
+            textAlign: "center",
+          }}
+        >
+          Line Chart
+        </p>
         <ResponsiveContainer width="100%" height="100%">
           <LineChart
             width={500}

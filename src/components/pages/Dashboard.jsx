@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import "../../styles/Dashboard.css";
 import SimpleLineChart from "../charts/SimpleLineChart";
+import MyBarChart from "../charts/BarChart";
 
 const Dashboard = () => {
   return (
@@ -34,8 +35,14 @@ const Dashboard = () => {
           </div>
         </div>
 
-        <div style={{ marginTop: "50px" }} className="">
-          <SimpleLineChart />
+        <div className="chartsContainer">
+          <div>
+            <SimpleLineChart />
+          </div>
+
+          <div>
+            <MyBarChart />
+          </div>
         </div>
       </div>
     </Fragment>
