@@ -24,7 +24,7 @@ const NavigationMenu = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/app-users">
+            <NavLink to="/users">
               <span>
                 <FiUsers />
               </span>{" "}

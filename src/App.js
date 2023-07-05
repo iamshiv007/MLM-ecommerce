@@ -4,6 +4,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Dashboard from './components/pages/Dashboard';
 import NavigationMenu from './components/Layout/NavigationMenu';
 import Header from './components/Layout/Header';
+// import Users from './components/pages/Users';
+import AppUsers from './components/pages/Users';
 
 function App() {
 
@@ -21,6 +23,7 @@ function App() {
             <Header setNavDisplay={setNavDisplay} setPageWidth={setPageWidth} navDisplay={navDisplay} pageWidth={pageWidth} />
             <Routes>
               <Route exact path="/" element={<Dashboard />} />
+              <Route exact path="/users" element={<AppUsers />} />
             </Routes>
           </div>
         </div>
