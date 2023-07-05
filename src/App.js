@@ -19,7 +19,7 @@ function App() {
           <div style={{ display: navDisplay }}>
             <NavigationMenu />
           </div>
-          <div style={{ width: pageWidth }}>
+          <div className='rightSide' style={{ width: pageWidth }}>
             <Header setNavDisplay={setNavDisplay} setPageWidth={setPageWidth} navDisplay={navDisplay} pageWidth={pageWidth} />
             <Routes>
               <Route exact path="/" element={<Dashboard />} />
