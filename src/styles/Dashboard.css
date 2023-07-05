@@ -65,6 +65,8 @@ p {
 
 .chartsContainer {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   padding: 16px;
+  row-gap: 80px;
+  column-gap: 30px;
 }

@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import "../../styles/Dashboard.css";
 import SimpleLineChart from "../charts/SimpleLineChart";
 import MyBarChart from "../charts/BarChart";
+import MyPieChart from "../charts/PieChart";
 
 const Dashboard = () => {
   return (
@@ -42,6 +43,10 @@ const Dashboard = () => {
 
           <div>
             <MyBarChart />
+          </div>
+
+          <div>
+            <MyPieChart />
           </div>
         </div>
       </div>
