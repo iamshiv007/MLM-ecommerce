@@ -1,7 +1,7 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import { DataGrid } from "@mui/x-data-grid";
 import "../../styles/Users.css";
-import { Button } from "@mui/material";
+import { Box, Button, Modal, TextField, Container, Grid } from "@mui/material";
 
 const columns = [
   {
@@ -265,10 +265,20 @@ const Users = () => {
   const customCellClassName = (params) => {
     return "custom-cell"; // CSS class for custom styling
   };
+
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
   return (
     <Fragment>
       <div className="usersPage">
-        <h1 style={{ marginBottom: "12px", color: "white" }}>Users</h1>
+        <div>
+          <h1 style={{ marginBottom: "12px", color: "white" }}>Users</h1>
+          <Button onClick={handleOpen} variant="contained" color="primary">
+            + Add New User
+          </Button>
+        </div>
         <div style={{ height: "100%", width: "100%" }}>
           <DataGrid
             rows={rows}
@@ -283,9 +293,154 @@ const Users = () => {
             getCellClassName={customCellClassName}
           />
         </div>
+
+        <div className="newUserModal">
+          <NewUserModal
+            handleOpen={handleOpen}
+            handleClose={handleClose}
+            open={open}
+            setOpen={setOpen}
+          />
+        </div>
       </div>
     </Fragment>
   );
 };
 
 export default Users;
+
+const NewUserModal = ({ handleOpen, handleClose, open, setOpen }) => {
+  const style = {
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    width: 400,
+    bgcolor: "background.paper",
+    border: "2px solid #000",
+    boxShadow: 24,
+    p: 2,
+    borderRadius: 2
+  };
+
+  return (
+    <Modal
+      open={open}
+      onClose={handleClose}
+      aria-labelledby="modal-modal-title"
+      aria-describedby="modal-modal-description"
+    >
+      <Box sx={style}>
+        <h2 style={{ marginBottom: "20px", textAlign: "center" }}>New User</h2>
+
+        <AddUserForm handleClose={handleClose} />
+      </Box>
+    </Modal>
+  );
+};
+
+const AddUserForm = ({ handleClose }) => {
+  const [formData, setFormData] = useState({
+    name: "",
+    mobileNo: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
+    referCode: "",
+  });
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // Add logic to handle form submission (e.g., validation, API calls)
+    console.log(formData);
+  };
+
+  return (
+    <Container maxWidth="sm">
+      <form onSubmit={handleSubmit}>
+        <Grid container spacing={2}>
+          <Grid item xs={12}>
+            <TextField
+              name="name"
+              label="Name"
+              fullWidth
+              value={formData.name}
+              onChange={handleChange}
+            />
+          </Grid>
+          <Grid item xs={12}>
+            <TextField
+              name="mobileNo"
+              label="Mobile No"
+              fullWidth
+              value={formData.mobileNo}
+              onChange={handleChange}
+            />
+          </Grid>
+          <Grid item xs={12}>
+            <TextField
+              name="email"
+              label="Email ID"
+              fullWidth
+              value={formData.email}
+              onChange={handleChange}
+            />
+          </Grid>
+          <Grid item xs={12}>
+            <TextField
+              name="password"
+              label="Password"
+              type="password"
+              fullWidth
+              value={formData.password}
+              onChange={handleChange}
+            />
+          </Grid>
+          <Grid item xs={12}>
+            <TextField
+              name="confirmPassword"
+              label="Confirm Password"
+              type="password"
+              fullWidth
+              value={formData.confirmPassword}
+              onChange={handleChange}
+            />
+          </Grid>
+          <Grid item xs={12}>
+            <TextField
+              name="referCode"
+              label="Refer Code"
+              fullWidth
+              value={formData.referCode}
+              onChange={handleChange}
+            />
+            <Grid item xs={12}>
+              <div className="modalButtons">
+                <Button
+                  onClick={handleClose}
+                  variant="contained"
+                  style={{ backgroundColor: "grey" }}
+                >
+                  Cancel
+                </Button>
+                <Button
+                  type="submit"
+                  onClick={handleClose}
+                  variant="contained"
+                  color="primary"
+                >
+                  Add User
+                </Button>
+              </div>
+            </Grid>
+          </Grid>
+        </Grid>
+      </form>
+    </Container>
+  );
+};

@@ -9,3 +9,21 @@
 .usersHeader {
   color: white;
 }
+
+.usersPage > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.usersPage > div:first-child button {
+  height: fit-content;
+  font-size: medium;
+  font-weight: 600;
+}
+
+.modalButtons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
