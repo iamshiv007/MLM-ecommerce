@@ -18,7 +18,7 @@ const columns = [
   {
     field: "email",
     headerName: "Email Id",
-    width: 180,
+    width: 220,
     headerClassName: "tableHeader",
   },
   {

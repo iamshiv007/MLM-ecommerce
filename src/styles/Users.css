@@ -19,3 +19,8 @@
   justify-content: space-between;
   margin-top: 20px;
 }
+
+.usersPage > p:nth-child(2) {
+  color: white;
+  margin-bottom: 20px;
+}

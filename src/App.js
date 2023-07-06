@@ -7,6 +7,7 @@ import Header from './components/Layout/Header';
 import AppUsers from './components/pages/Users';
 import GeniusCoinRate from './components/pages/GeniusCoinRate';
 import TotalSellCoin from './components/pages/TotalSellCoin';
+import UserCoins from './components/pages/UserCoins';
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
               <Route exact path="/users" element={<AppUsers />} />
               <Route exact path="/geniusCoinRate" element={<GeniusCoinRate />} />
               <Route exact path="/totalSellCoin" element={<TotalSellCoin />} />
+              <Route exact path="/userCoins" element={<UserCoins />} />
             </Routes>
           </div>
         </div>

@@ -32,6 +32,14 @@ const NavigationMenu = () => {
             </NavLink>
           </li>
           <li>
+            <NavLink to="/userCoins">
+              <span>
+                <FiUsers />
+              </span>{" "}
+              User Coins
+            </NavLink>
+          </li>
+          <li>
             <NavLink to="/geniusCoinRate">
               <span>
                 <BsCashCoin />

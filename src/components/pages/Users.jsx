@@ -266,7 +266,7 @@ const Users = () => {
     return "custom-cell"; // CSS class for custom styling
   };
 
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
@@ -279,6 +279,11 @@ const Users = () => {
             + Add New User
           </Button>
         </div>
+
+        <p>
+          Total Users: <span className="numberText">{rows.length}</span>
+        </p>
+
         <div style={{ height: "100%", width: "100%" }}>
           <DataGrid
             rows={rows}
