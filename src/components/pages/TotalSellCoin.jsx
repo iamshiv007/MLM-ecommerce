@@ -4,27 +4,21 @@ import { DataGrid } from "@mui/x-data-grid";
 
 const columns = [
   {
-    field: "id",
+    field: "srno",
     headerName: "Sr. NO.",
-    width: 120,
+    width: 80,
+    headerClassName: "tableHeader",
+  },
+  {
+    field: "id",
+    headerName: "Id",
+    width: 150,
     headerClassName: "tableHeader",
   },
   {
     field: "name",
     headerName: "Name",
-    width: 130,
-    headerClassName: "tableHeader",
-  },
-  {
-    field: "email",
-    headerName: "Email Id",
-    width: 220,
-    headerClassName: "tableHeader",
-  },
-  {
-    field: "date",
-    headerName: "Date",
-    width: 180,
+    width: 150,
     headerClassName: "tableHeader",
   },
   {
@@ -34,8 +28,32 @@ const columns = [
     headerClassName: "tableHeader",
   },
   {
-    field: "coinsValue",
-    headerName: "Coins Value",
+    field: "rate",
+    headerName: "Rate (₹)",
+    width: 100,
+    headerClassName: "tableHeader",
+  },
+  {
+    field: "amount",
+    headerName: "Amount (₹)",
+    width: 130,
+    headerClassName: "tableHeader",
+  },
+  {
+    field: "date",
+    headerName: "Date",
+    width: 150,
+    headerClassName: "tableHeader",
+  },
+  {
+    field: "time",
+    headerName: "Time",
+    width: 130,
+    headerClassName: "tableHeader",
+  },
+  {
+    field: "status",
+    headerName: "Status",
     width: 130,
     headerClassName: "tableHeader",
   },
@@ -43,58 +61,76 @@ const columns = [
 
 const rows = [
   {
-    id: 1,
+    srno: 1,
+    id: "id1",
     name: "John Doe",
-    email: "johndoe@example.com",
+    coins: 100,
+    rate: 3.5,
+    amount: 350,
     date: "2023-07-01",
-    coins: 10,
-    coinsValue: "$2,300",
+    time: "12:14 pm",
+    status: "success",
   },
   {
-    id: 2,
+    srno: 2,
+    id: "id2",
     name: "Jane Smith",
-    email: "janesmith@example.com",
+    coins: 50,
+    rate: 4.5,
+    amount: 225,
     date: "2023-07-02",
-    coins: 5,
-    coinsValue: "$1000",
+    time: "09:00 am",
+    status: "success",
   },
   {
-    id: 3,
+    srno: 3,
+    id: "id3",
     name: "Mike Johnson",
-    email: "mikejohnson@example.com",
+    coins: 150,
+    rate: 1.5,
+    amount: 225,
     date: "2023-07-03",
-    coins: 15,
-    coinsValue: "$1,500",
+    time: "01:25 pm",
+    status: "pending",
   },
   {
-    id: 4,
+    srno: 4,
+    id: "id4",
     name: "Sarah Williams",
-    email: "sarahwilliams@example.com",
+    coins: 80,
+    rate: 2.4,
+    amount: 192,
     date: "2023-07-04",
-    coins: 8,
-    coinsValue: "$1800",
+    time: "02:04 am",
+    status: "pending",
   },
   {
-    id: 5,
+    srno: 5,
+    id: "id5",
     name: "David Brown",
-    email: "davidbrown@example.com",
+    coins: 120,
+    rate: 9.9,
+    amount: 1188,
     date: "2023-07-05",
-    coins: 12,
-    coinsValue: "$1,200",
+    time: "12:30 pm",
+    status: "pending",
   },
 ];
 
 const TotalSellCoin = () => {
+  const totalCoinsSold = rows.reduce((sum, row) => sum + row.coins, 0);
+  const totalAmount = rows.reduce((sum, row) => sum + row.amount, 0);
+
   return (
     <Fragment>
       <div className="totalSellCoinContainer page">
         <h1 className="pageName">Total Sell Coin</h1>
 
         <p>
-          Total Coin Sold: <span className="numberText">50</span>
+          Total Coin Sold: <span className="numberText">{totalCoinsSold}</span>
         </p>
         <p>
-          Total Value: <span className="numberText">$7800</span>
+          Total amount: <span className="numberText">{totalAmount}</span>
         </p>
 
         <div className="sellHistory">
@@ -114,7 +150,7 @@ const TotalSellHisory = () => {
 
   return (
     <>
-      <p className="tableHeading">Coin Sell History</p>
+      <p className="tableHeading">Sell Coins History</p>
       <div style={{ height: "100%", width: "100%" }}>
         <DataGrid
           rows={rows}
