@@ -4,8 +4,14 @@ import "../../styles/RegisteredUsers.css";
 
 const columns = [
   {
-    field: "id",
+    field: "srno",
     headerName: "Sr. NO.",
+    width: 80,
+    headerClassName: "tableHeader",
+  },
+  {
+    field: "id",
+    headerName: "Id",
     width: 80,
     headerClassName: "tableHeader",
   },
@@ -37,35 +43,40 @@ const columns = [
 
 const rows = [
   {
-    id: 1,
+    srno: 1,
+    id:"id1",
     name: "John Doe",
     mobileNumber: "1234567890",
     email: "john.doe@example.com",
     wallet: "$100",
   },
   {
-    id: 2,
+    srno: 2,
+    id:"id2",
     name: "Jane Smith",
     mobileNumber: "9876543210",
     email: "jane.smith@example.com",
     wallet: "$50",
   },
   {
-    id: 3,
+    srno: 3,
+    id:"id3",
     name: "Robert Johnson",
     mobileNumber: "5551234567",
     email: "robert.johnson@example.com",
     wallet: "$75",
   },
   {
-    id: 4,
+    srno: 4,
+    id:"id4",
     name: "Emily Davis",
     mobileNumber: "9998887777",
     email: "emily.davis@example.com",
     wallet: "$200",
   },
   {
-    id: 5,
+    srno: 5,
+    id:"id5",
     name: "Michael Wilson",
     mobileNumber: "7774445555",
     email: "michael.wilson@example.com",

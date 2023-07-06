@@ -5,8 +5,14 @@ import { Box, Button, Modal, TextField, Container, Grid } from "@mui/material";
 
 const columns = [
   {
-    field: "id",
+    field: "srno",
     headerName: "Sr. NO.",
+    width: 60,
+    headerClassName: "tableHeader",
+  },
+  {
+    field: "id",
+    headerName: "Id",
     width: 60,
     headerClassName: "tableHeader",
   },
@@ -129,7 +135,8 @@ const changePassword = () => {
 
 const rows = [
   {
-    id: 1,
+    srno: 1,
+    id: "id1",
     name: "John Doe",
     mobileNumber: "1234567890",
     email: "john.doe@example.com",
@@ -142,7 +149,8 @@ const rows = [
     changePassword: false,
   },
   {
-    id: 2,
+    srno: 2,
+    id: "id2",
     name: "Jane Smith",
     mobileNumber: "9876543210",
     email: "jane.smith@example.com",
@@ -155,7 +163,8 @@ const rows = [
     changePassword: true,
   },
   {
-    id: 3,
+    srno: 3,
+    id: "id3",
     name: "Robert Johnson",
     mobileNumber: "5551234567",
     email: "robert.johnson@example.com",
@@ -168,7 +177,8 @@ const rows = [
     changePassword: true,
   },
   {
-    id: 4,
+    srno: 4,
+    id: "id4",
     name: "Emily Davis",
     mobileNumber: "9998887777",
     email: "emily.davis@example.com",
@@ -181,7 +191,8 @@ const rows = [
     changePassword: false,
   },
   {
-    id: 5,
+    srno: 5,
+    id: "id5",
     name: "Michael Wilson",
     mobileNumber: "7774445555",
     email: "michael.wilson@example.com",
@@ -194,7 +205,8 @@ const rows = [
     changePassword: false,
   },
   {
-    id: 6,
+    srno: 6,
+    id: "id6",
     name: "Sarah Thompson",
     mobileNumber: "2223334444",
     email: "sarah.thompson@example.com",
@@ -207,7 +219,8 @@ const rows = [
     changePassword: true,
   },
   {
-    id: 7,
+    srno: 7,
+    id: "id7",
     name: "David Anderson",
     mobileNumber: "8885556666",
     email: "david.anderson@example.com",
@@ -220,7 +233,8 @@ const rows = [
     changePassword: true,
   },
   {
-    id: 8,
+    srno: 8,
+    id: "id7",
     name: "Olivia Lee",
     mobileNumber: "4447778888",
     email: "olivia.lee@example.com",
@@ -233,7 +247,8 @@ const rows = [
     changePassword: false,
   },
   {
-    id: 9,
+    srno: 9,
+    id: "id8",
     name: "Daniel Hernandez",
     mobileNumber: "1112223333",
     email: "daniel.hernandez@example.com",
@@ -246,7 +261,8 @@ const rows = [
     changePassword: false,
   },
   {
-    id: 10,
+    srno: 10,
+    id: "id10",
     name: "Sophia Taylor",
     mobileNumber: "6669990000",
     email: "sophia.taylor@example.com",

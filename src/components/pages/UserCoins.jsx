@@ -4,31 +4,36 @@ import React, { Fragment, useState } from "react";
 
 const rows = [
   {
-    id: 1,
+    srno: 1,
+    id: "id1",
     name: "John Doe",
     email: "johndoe@example.com",
     coins: 10,
   },
   {
-    id: 2,
+    srno: 2,
+    id: "id2",
     name: "Jane Smith",
     email: "janesmith@example.com",
     coins: 5,
   },
   {
-    id: 3,
+    srno: 3,
+    id: "id3",
     name: "Mike Johnson",
     email: "mikejohnson@example.com",
     coins: 15,
   },
   {
-    id: 4,
+    srno: 4,
+    id: "id4",
     name: "Sarah Williams",
     email: "sarahwilliams@example.com",
     coins: 8,
   },
   {
-    id: 5,
+    srno: 5,
+    id: "id5",
     name: "David Brown",
     email: "davidbrown@example.com",
     coins: 12,
@@ -50,8 +55,14 @@ const UserCoins = () => {
 
   const columns = [
     {
-      field: "id",
+      field: "srno",
       headerName: "Sr. NO.",
+      width: 120,
+      headerClassName: "tableHeader",
+    },
+    {
+      field: "id",
+      headerName: "Id",
       width: 120,
       headerClassName: "tableHeader",
     },

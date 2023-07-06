@@ -5,8 +5,14 @@ import { Box, Button, Modal } from "@mui/material";
 
 const columns = [
   {
-    field: "id",
+    field: "srno",
     headerName: "Sr. NO.",
+    width: 120,
+    headerClassName: "tableHeader",
+  },
+  {
+    field: "id",
+    headerName: "Id",
     width: 120,
     headerClassName: "tableHeader",
   },
@@ -38,35 +44,40 @@ const columns = [
 
 const rows = [
   {
-    id: 1,
+    srno: 1,
+    id: "id1",
     date: "2023-07-01",
     time: "10:00 AM",
     difference: "+5",
     geniusCoinRate: "$18.50",
   },
   {
-    id: 2,
+    srno: 2,
+    id: "id2",
     date: "2023-07-02",
     time: "11:30 AM",
     difference: "-2.50",
     geniusCoinRate: "$16",
   },
   {
-    id: 3,
+    srno: 3,
+    id: "id3",
     date: "2023-07-03",
     time: "09:45 AM",
     difference: "+2.60",
     geniusCoinRate: "$18.60",
   },
   {
-    id: 4,
+    srno: 4,
+    id: "id4",
     date: "2023-07-04",
     time: "03:15 PM",
     difference: "+1",
     geniusCoinRate: "$19.60",
   },
   {
-    id: 5,
+    srno: 5,
+    id: "id5",
     date: "2023-07-05",
     time: "08:20 AM",
     difference: "-10.90",
