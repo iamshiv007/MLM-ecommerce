@@ -1,0 +1,29 @@
+.uploadBox {
+  color: white;
+  padding: 40px;
+  border: 1px dashed white;
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  margin-top: 50px;
+  cursor: pointer;
+}
+
+.upload-box p {
+  color: white;
+}
+
+.upload-box img {
+  width: 100%;
+}
+
+.file-preview {
+  width: 80%;
+  margin: auto;
+}
+
+.uploadBtn {
+  width: fit-content;
+  margin: auto;
+  margin-top: 20px;
+}

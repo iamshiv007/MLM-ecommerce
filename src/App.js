@@ -9,6 +9,7 @@ import GeniusCoinRate from './components/pages/GeniusCoinRate';
 import TotalSellCoin from './components/pages/TotalSellCoin';
 import UserCoins from './components/pages/UserCoins';
 import RegisteredUsers from './components/pages/RegisteredUser';
+import UploadBanners from './components/pages/UploadBanners';
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
               <Route exact path="/totalSellCoin" element={<TotalSellCoin />} />
               <Route exact path="/userCoins" element={<UserCoins />} />
               <Route exact path="/registeredUsers" element={<RegisteredUsers />} />
+              <Route exact path="/uploadBanners" element={<UploadBanners />} />
             </Routes>
           </div>
         </div>

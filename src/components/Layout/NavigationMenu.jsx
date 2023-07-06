@@ -6,6 +6,7 @@ import { FiUsers } from "react-icons/fi";
 import { FaUserShield, FaCoins } from "react-icons/fa";
 import { BsCashCoin, BsGraphUp } from "react-icons/bs";
 import { ImFolderUpload } from "react-icons/im";
+import { BiCoinStack } from "react-icons/bi";
 
 const NavigationMenu = () => {
   return (
@@ -34,7 +35,7 @@ const NavigationMenu = () => {
           <li>
             <NavLink to="/userCoins">
               <span>
-                <FiUsers />
+                <BiCoinStack />
               </span>{" "}
               User Coins
             </NavLink>
@@ -72,7 +73,7 @@ const NavigationMenu = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/upload-banners">
+            <NavLink to="/uploadBanners">
               <span>
                 <ImFolderUpload />
               </span>{" "}
