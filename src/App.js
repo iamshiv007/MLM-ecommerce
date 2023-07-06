@@ -4,8 +4,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Dashboard from './components/pages/Dashboard';
 import NavigationMenu from './components/Layout/NavigationMenu';
 import Header from './components/Layout/Header';
-// import Users from './components/pages/Users';
 import AppUsers from './components/pages/Users';
+import GeniusCoinRate from './components/pages/GeniusCoinRate';
 
 function App() {
 
@@ -24,6 +24,7 @@ function App() {
             <Routes>
               <Route exact path="/" element={<Dashboard />} />
               <Route exact path="/users" element={<AppUsers />} />
+              <Route exact path="/geniusCoinRate" element={<GeniusCoinRate />} />
             </Routes>
           </div>
         </div>

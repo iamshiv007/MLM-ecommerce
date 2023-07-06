@@ -320,7 +320,7 @@ const NewUserModal = ({ handleOpen, handleClose, open, setOpen }) => {
     border: "2px solid #000",
     boxShadow: 24,
     p: 2,
-    borderRadius: 2
+    borderRadius: 2,
   };
 
   return (

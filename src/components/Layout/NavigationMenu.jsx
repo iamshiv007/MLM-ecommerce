@@ -32,7 +32,7 @@ const NavigationMenu = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/genius-coin-rate">
+            <NavLink to="/geniusCoinRate">
               <span>
                 <BsCashCoin />
               </span>
