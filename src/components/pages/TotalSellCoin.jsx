@@ -7,37 +7,37 @@ const columns = [
     field: "id",
     headerName: "Sr. NO.",
     width: 120,
-    headerClassName: "usersHeader",
+    headerClassName: "tableHeader",
   },
   {
     field: "name",
     headerName: "Name",
     width: 130,
-    headerClassName: "usersHeader",
+    headerClassName: "tableHeader",
   },
   {
     field: "email",
     headerName: "Email Id",
     width: 180,
-    headerClassName: "usersHeader",
+    headerClassName: "tableHeader",
   },
   {
     field: "date",
     headerName: "Date",
     width: 180,
-    headerClassName: "usersHeader",
+    headerClassName: "tableHeader",
   },
   {
     field: "coins",
     headerName: "Coins",
     width: 130,
-    headerClassName: "usersHeader",
+    headerClassName: "tableHeader",
   },
   {
     field: "coinsValue",
     headerName: "Coins Value",
     width: 130,
-    headerClassName: "usersHeader",
+    headerClassName: "tableHeader",
   },
 ];
 
@@ -87,16 +87,14 @@ const rows = [
 const TotalSellCoin = () => {
   return (
     <Fragment>
-      <div className="totalSellCoinContainer">
-        <h1 style={{ marginBottom: "12px", color: "white" }}>
-          Total Sell Coin
-        </h1>
+      <div className="totalSellCoinContainer page">
+        <h1 className="pageName">Total Sell Coin</h1>
 
         <p>
-          Total Coin Sold: <span>50</span>
+          Total Coin Sold: <span className="numberText">50</span>
         </p>
         <p>
-          Total Value: <span>$7800</span>
+          Total Value: <span className="numberText">$7800</span>
         </p>
 
         <div className="sellHistory">
@@ -116,7 +114,7 @@ const TotalSellHisory = () => {
 
   return (
     <>
-      <p className="">Coin Sell History</p>
+      <p className="tableHeading">Coin Sell History</p>
       <div style={{ height: "100%", width: "100%" }}>
         <DataGrid
           rows={rows}

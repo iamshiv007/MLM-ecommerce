@@ -8,31 +8,31 @@ const columns = [
     field: "id",
     headerName: "Sr. NO.",
     width: 120,
-    headerClassName: "usersHeader",
+    headerClassName: "tableHeader",
   },
   {
     field: "date",
     headerName: "Date",
     width: 180,
-    headerClassName: "usersHeader",
+    headerClassName: "tableHeader",
   },
   {
     field: "time",
     headerName: "Time",
     width: 130,
-    headerClassName: "usersHeader",
+    headerClassName: "tableHeader",
   },
   {
     field: "difference",
     headerName: "Difference",
     width: 130,
-    headerClassName: "usersHeader",
+    headerClassName: "tableHeader",
   },
   {
     field: "geniusCoinRate",
     headerName: "Genius Coin Rate",
     width: 130,
-    headerClassName: "usersHeader",
+    headerClassName: "tableHeader",
   },
 ];
 
@@ -83,13 +83,11 @@ const GeniusCoinRate = () => {
 
   return (
     <Fragment>
-      <div className="geniusCoinRateContainer">
-        <h1 style={{ marginBottom: "20px", color: "white" }}>
-          Genius Coin Rate
-        </h1>
+      <div className="geniusCoinRateContainer page">
+        <h1 className="pageName">Genius Coin Rate</h1>
         <div>
           <p className="currentRate">
-            Current Rate: <span> ${gCoinRate}</span>
+            Current Rate: <span className="numberText"> ${gCoinRate}</span>
           </p>
 
           <Button onClick={handleOpen} variant="contained" color="primary">
@@ -123,7 +121,7 @@ const RateHistoryTable = () => {
 
   return (
     <>
-      <p className="">Genius Coin Rate History</p>
+      <p className="tableHeading">Genius Coin Rate History</p>
       <div style={{ height: "100%", width: "100%" }}>
         <DataGrid
           rows={rows}

@@ -1,24 +1,5 @@
-.totalSellCoinContainer {
-  padding: 16px;
-}
-
 .totalSellCoinContainer > p:nth-child(2),
 .totalSellCoinContainer > p:nth-child(3) {
   color: white;
   margin-bottom: 10px;
-}
-
-.totalSellCoinContainer > p:nth-child(2) > span,
-.totalSellCoinContainer > p:nth-child(3) > span {
-  font-size: 25px;
-  padding: 4px;
-  color: #6495ed;
-}
-
-.totalSellCoinContainer .sellHistory > P:first-child {
-  color: white;
-  font-size: 22px;
-  font-weight: 500;
-  margin-top: 30px;
-  margin-bottom: 20px;
 }

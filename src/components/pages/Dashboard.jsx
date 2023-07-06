@@ -7,8 +7,8 @@ import MyPieChart from "../charts/PieChart";
 const Dashboard = () => {
   return (
     <Fragment>
-      <div className="dashboard">
-        <h1 style={{ marginBottom: "12px", color: "white" }}>Dashboard</h1>
+      <div className="dashboard page">
+        <h1 className="pageName">Dashboard</h1>
         <div className="summary">
           <div className="card">
             <h4>App Users</h4>

@@ -1,23 +1,5 @@
-.geniusCoinRateContainer {
-  padding: 16px;
-}
-
 .geniusCoinRateContainer .currentRate {
   color: white;
-}
-
-.geniusCoinRateContainer .currentRate > span {
-  font-size: 25px;
-  padding: 4px;
-  color: #6495ed;
-}
-
-.geniusCoinRateContainer .rateHistory > P:first-child {
-  color: white;
-  font-size: 22px;
-  font-weight: 500;
-  margin-top: 30px;
-  margin-bottom: 20px;
 }
 
 .geniusCoinRateContainer > div:nth-child(2) {

@@ -16,3 +16,30 @@
   height: 100vh;
   overflow-y: scroll;
 }
+
+.page {
+  padding: 16px;
+}
+
+.pageName {
+  color: white;
+  margin-bottom: 12px;
+}
+
+.tableHeader {
+  color: white;
+}
+
+.numberText {
+  font-size: 25px;
+  padding: 4px;
+  color: #6495ed;
+}
+
+.tableHeading {
+  color: white;
+  font-size: 22px;
+  font-weight: 500;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}

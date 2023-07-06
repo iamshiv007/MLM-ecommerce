@@ -8,68 +8,68 @@ const columns = [
     field: "id",
     headerName: "Sr. NO.",
     width: 60,
-    headerClassName: "usersHeader",
+    headerClassName: "tableHeader",
   },
   {
     field: "name",
     headerName: "Name",
     width: 130,
-    headerClassName: "usersHeader",
+    headerClassName: "tableHeader",
   },
   {
     field: "mobileNumber",
     headerName: "Mobile NO.",
     width: 110,
-    headerClassName: "usersHeader",
+    headerClassName: "tableHeader",
   },
   {
     field: "email",
     headerName: "Email Id",
     width: 220,
-    headerClassName: "usersHeader",
+    headerClassName: "tableHeader",
   },
   {
     field: "referCode",
     headerName: "Refer Code",
     width: 110,
-    headerClassName: "usersHeader",
+    headerClassName: "tableHeader",
   },
   {
     field: "wallet",
     headerName: "Wallet",
     width: 100,
-    headerClassName: "usersHeader",
+    headerClassName: "tableHeader",
   },
   {
     field: "myTeam",
     headerName: "My Team",
     width: 100,
-    headerClassName: "usersHeader",
+    headerClassName: "tableHeader",
   },
   {
     field: "address",
     headerName: "Address",
     width: 150,
-    headerClassName: "usersHeader",
+    headerClassName: "tableHeader",
   },
   {
     field: "showPassword",
     headerName: "Show Password",
     width: 130,
-    headerClassName: "usersHeader",
+    headerClassName: "tableHeader",
   },
   {
     field: "showSecretKey",
     headerName: "Show Secret Key",
     width: 150,
-    headerClassName: "usersHeader",
+    headerClassName: "tableHeader",
     autoWidth: true,
   },
   {
     field: "changePassword",
     headerName: "Change Password",
     width: 130,
-    headerClassName: "usersHeader",
+    headerClassName: "tableHeader",
     renderCell: (params) => (
       <Button
         variant="contained"
@@ -84,7 +84,7 @@ const columns = [
     field: "blockUnblock",
     headerName: "Block/Unblock",
     width: 140,
-    headerClassName: "usersHeader",
+    headerClassName: "tableHeader",
     autoWidth: true,
     renderCell: (params) => (
       <Button
@@ -100,7 +100,7 @@ const columns = [
     field: "delete",
     headerName: "Delete",
     width: 100,
-    headerClassName: "usersHeader",
+    headerClassName: "tableHeader",
     autoWidth: true,
     renderCell: (params) => (
       <Button
@@ -272,9 +272,9 @@ const Users = () => {
 
   return (
     <Fragment>
-      <div className="usersPage">
+      <div className="usersPage page">
         <div>
-          <h1 style={{ marginBottom: "12px", color: "white" }}>Users</h1>
+          <h1 className="pageName">Users</h1>
           <Button onClick={handleOpen} variant="contained" color="primary">
             + Add New User
           </Button>
