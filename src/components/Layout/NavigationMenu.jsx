@@ -40,7 +40,7 @@ const NavigationMenu = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/total-sell-coin">
+            <NavLink to="/totalSellCoin">
               <span>
                 <FaCoins />
               </span>{" "}

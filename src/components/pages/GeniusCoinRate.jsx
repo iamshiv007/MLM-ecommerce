@@ -77,10 +77,6 @@ const rows = [
 const GeniusCoinRate = () => {
   const [gCoinRate, setGCoinRate] = useState(8.6);
 
-  const customCellClassName = (params) => {
-    return "custom-cell"; // CSS class for custom styling
-  };
-
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -102,20 +98,7 @@ const GeniusCoinRate = () => {
         </div>
 
         <div className="rateHistory">
-          <p className="">Genius Coin Rate History</p>
-          <div style={{ height: "100%", width: "100%" }}>
-            <DataGrid
-              rows={rows}
-              columns={columns}
-              initialState={{
-                pagination: {
-                  paginationModel: { page: 0, pageSize: 5 },
-                },
-              }}
-              pageSizeOptions={[5, 10]}
-              getCellClassName={customCellClassName}
-            />
-          </div>
+          <RateHistoryTable />
         </div>
 
         <div>
@@ -134,6 +117,31 @@ const GeniusCoinRate = () => {
 };
 
 export default GeniusCoinRate;
+
+const RateHistoryTable = () => {
+  const customCellClassName = (params) => {
+    return "custom-cell"; // CSS class for custom styling
+  };
+
+  return (
+    <>
+      <p className="">Genius Coin Rate History</p>
+      <div style={{ height: "100%", width: "100%" }}>
+        <DataGrid
+          rows={rows}
+          columns={columns}
+          initialState={{
+            pagination: {
+              paginationModel: { page: 0, pageSize: 5 },
+            },
+          }}
+          pageSizeOptions={[5, 10]}
+          getCellClassName={customCellClassName}
+        />
+      </div>
+    </>
+  );
+};
 
 const EditRateModal = ({
   handleOpen,
