@@ -1,0 +1,4 @@
+.registeredUsersPage > p:nth-child(2) {
+  color: white;
+  margin-bottom: 20px;
+}

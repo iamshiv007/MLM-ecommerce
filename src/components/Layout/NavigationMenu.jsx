@@ -56,7 +56,7 @@ const NavigationMenu = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/total-registered-users">
+            <NavLink to="/registeredUsers">
               <span>
                 <FaUserShield />
               </span>{" "}
