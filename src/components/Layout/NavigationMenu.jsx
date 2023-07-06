@@ -65,7 +65,7 @@ const NavigationMenu = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/check-daily-genius-coin-rate">
+            <NavLink to="/dailyGeniusCoinRate">
               <span>
                 <BsGraphUp />
               </span>
