@@ -295,12 +295,7 @@ const Users = () => {
         </div>
 
         <div className="newUserModal">
-          <NewUserModal
-            handleOpen={handleOpen}
-            handleClose={handleClose}
-            open={open}
-            setOpen={setOpen}
-          />
+          <NewUserModal handleClose={handleClose} open={open} />
         </div>
       </div>
     </Fragment>
@@ -309,7 +304,7 @@ const Users = () => {
 
 export default Users;
 
-const NewUserModal = ({ handleOpen, handleClose, open, setOpen }) => {
+const NewUserModal = ({ handleClose, open }) => {
   const style = {
     position: "absolute",
     top: "50%",

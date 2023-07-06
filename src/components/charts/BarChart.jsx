@@ -56,7 +56,6 @@ const data = [
 ];
 
 const MyBarChart = () => {
-  //   static demoUrl = 'https://codesandbox.io/s/bar-chart-has-no-padding-jphoc';
 
   return (
     <div

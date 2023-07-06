@@ -103,10 +103,8 @@ const GeniusCoinRate = () => {
 
         <div>
           <EditRateModal
-            handleOpen={handleOpen}
             handleClose={handleClose}
             open={open}
-            setOpen={setOpen}
             gCoinRate={gCoinRate}
             setGCoinRate={setGCoinRate}
           />
@@ -143,14 +141,7 @@ const RateHistoryTable = () => {
   );
 };
 
-const EditRateModal = ({
-  handleOpen,
-  handleClose,
-  open,
-  setOpen,
-  setGCoinRate,
-  gCoinRate,
-}) => {
+const EditRateModal = ({ handleClose, open, setGCoinRate, gCoinRate }) => {
   const style = {
     position: "absolute",
     top: "50%",
